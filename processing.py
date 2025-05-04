@@ -13,7 +13,7 @@ def limpar_mortos(valor):
     texto = texto.replace(',', '').replace('–', '-').replace('−', '-').replace('.', '')
     
     # Casos com intervalo: pegar a média
-    if '-' in texto:
+    if '-' in texto or 'a' in texto:
         try:
             partes = re.split(r'[-–]', texto)
             numeros = [float(p.strip()) for p in partes if p.strip()]
@@ -62,7 +62,7 @@ def normalizar_data(data):
             return f"00-{mes}-{ano}"
     
     # Apenas ano (formato genérico)
-    match = re.match(r'^\d{4}$', data)
+    match = re.match(r'^\d{4}$', data) or re.match(r'^\d{2}$', data)
     if match:
         ano = match.group(0)
         return f"00-00-{ano}"
@@ -91,6 +91,10 @@ def limpar_localizacao(localizacao):
             localizacao = re.sub(r'\(.*?\)', '', localizacao).strip()
     else:
         localizacao = re.sub(r'\(.*?\)', '', localizacao).strip()
+
+    # Separa a frase por vírgula e pega apenas a última parte
+    partes = localizacao.split(',')
+    localizacao = partes[-1].strip() if partes else localizacao
 
     # Substitui " e " por ", " para padronizar múltiplos países
     localizacao = localizacao.replace(' e ', ', ')

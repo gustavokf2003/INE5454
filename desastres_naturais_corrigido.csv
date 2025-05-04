@@ -11,13 +11,13 @@ Número de mortos,Evento,Localização,Data,Tipo
 200000.0,Terremoto de 1303 em Hongdong,China,17-09-130,Terremotos
 200000.0,Terremoto Damghan de 856,Irã,22-12-856,Terremotos
 200000.0,Terremoto Tabriz de 1780,Irã,08-01-178,Terremotos
-1850.0,Incêndio Peshtigo,"Wisconsin, Estados Unidos",08-10-187,Incêndios florestais
+1850.0,Incêndio Peshtigo,Estados Unidos,08-10-187,Incêndios florestais
 1200.0,Incêndio Kursha-2,União Soviética,03-08-193,Incêndios florestais
-453.0,Incêndio Cloquet,"Minnesota, Estados Unidos",12-10-191,Incêndios florestais
-418.0,Grande Fogo Hinckley,"Minnesota, Estados Unidos",01-09-189,Incêndios florestais
-282.0,Incêndio Thumb,"Michigan, Estados Unidos",05-09-188,Incêndios florestais
-240.0,Incêndios florestais na Indonésia em 1997,"Sumatra, Kalimantan, Indonésia",00-09-199,Incêndios florestais
-223.0,Incêndio Matheson,"Ontário, Canadá",29-07-191,Incêndios florestais
+453.0,Incêndio Cloquet,Estados Unidos,12-10-191,Incêndios florestais
+418.0,Grande Fogo Hinckley,Estados Unidos,01-09-189,Incêndios florestais
+282.0,Incêndio Thumb,Estados Unidos,05-09-188,Incêndios florestais
+240.0,Incêndios florestais na Indonésia em 1997,Indonésia,00-09-199,Incêndios florestais
+223.0,Incêndio Matheson,Canadá,29-07-191,Incêndios florestais
 191.0,Fogo do Dragão Negro,"China, União Soviética",01-05-198,Incêndios florestais
 173.0,Black Saturday Bushfires,Austrália,07-02-100,Incêndios florestais
 230.0,Incêndio Miramichi,Canadá,07-10-182,Incêndios florestais
@@ -60,7 +60,7 @@ Número de mortos,Evento,Localização,Data,Tipo
 2000.0,Onda de calor no Paquistão 2015,Paquistão,00-00-2015,Ondas de calor
 3350.0,Onda de calor nos Estados Unidos em 1980,Estados Unidos,00-00-1980,Ondas de calor
 1718.0,Onda de calor japonesa de 2010,Japão,00-00-2010,Ondas de calor
-13.0,O tornado Daulatpur – Saturia,"Manikganj, Bangladesh",00-00-1989,Tornados
+13.0,O tornado Daulatpur – Saturia,Bangladesh,00-00-1989,Tornados
 6950.0,O surto de tornado Tri-State,Estados Unidos,00-00-1925,Tornados
 6810.0,Tornado Dhaka 1973,Bangladesh,00-00-1973,Tornados
 6600.0,Tornado do Paquistão Oriental de 1969,Bangladesh,00-00-1969,Tornados
@@ -85,7 +85,7 @@ Número de mortos,Evento,Localização,Data,Tipo
 30000.0,Erupção do Monte Pelée em 1902,Martinica,07-05-190,Erupções vulcânicas
 23000.0,Tragédia de Armero,Colômbia,13-11-198,Erupções vulcânicas
 15000.0,Terremoto e tsunami de Unzen 1792,Japão,21-05-179,Erupções vulcânicas
-13000.0,Erupção do Monte Vesúvio em 79 DC,Itália,,Erupções vulcânicas
+13000.0,Erupção do Monte Vesúvio em 79 DC,Itália,00-00-79,Erupções vulcânicas
 10000.0,Erupção Kelud de 1586,Indonésia,00-00-1586,Erupções vulcânicas
 6000.0,Erupção de Santa Maria em 1902,Guatemala,24-10-190,Erupções vulcânicas
 5000.0,Kelud mudflow de 1919,Indonésia,19-05-191,Erupções vulcânicas
