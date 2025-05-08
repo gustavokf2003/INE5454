@@ -40,7 +40,7 @@ def normalizar_data(data):
     }
 
     # Expressão para capturar dia, mês (por extenso) e ano
-    match = re.match(r'(\d{1,2}) de (\w+) de (\d{3})', data)
+    match = re.match(r'(\d{1,2}) de (\w+) de (\d{4})', data) or re.match(r'(\d{1,2}) de (\w+) de (\d{3})', data)
     if match:
         dia, mes_ext, ano = match.groups()
         mes = meses.get(mes_ext)
@@ -54,7 +54,7 @@ def normalizar_data(data):
         return f"00-00-{ano1}"
     
     # Formato: mês por extenso e ano (sem dia)
-    match = re.match(r'(\w+) de (\d{3})', data)
+    match = re.match(r'(\w+) de (\d{4})', data) or re.match(r'(\w+) de (\d{3})', data)
     if match:
         mes_ext, ano = match.groups()
         mes = meses.get(mes_ext)
@@ -106,10 +106,24 @@ def limpar_localizacao(localizacao):
 
     return localizacao
 
+def deriva_data(df):
+    df['Dia'] = df['Data'].str[:2]
+    df['Mês'] = df['Data'].str[3:5]
+    df['Ano'] = df['Data'].str[6:]
+
+    df['Dia'] = df['Dia'].replace('00','')
+    df['Mês'] = df['Mês'].replace('00','')
+    df['Ano'] = df['Ano'].replace('00','')
+
+    return df
+ 
 df['Data'] = df['Data'].apply(normalizar_data)
 df['Número de mortos'] = df['Número de mortos'].apply(limpar_mortos)
 df['Tipo'] = df['Tipo'].astype(str).str.strip().str.capitalize()
 df['Localização'] = df['Localização'].apply(limpar_localizacao)
+
+df = df.rename(columns={'Localização': 'País'})
+df = deriva_data(df)
 
 df.to_csv('desastres_naturais_corrigido.csv', index=False)
 
