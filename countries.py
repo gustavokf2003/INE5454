@@ -8,6 +8,7 @@ countries = {
     'China':'china', 
     'Colômbia':'colombia', 
     'Estados Unidos':'united-states', 
+    'Englaterra':'united-kingdom',
     'Europa': 'european-union', 
     'Geórgia':'georgia', 
     'Grécia':'greece', 
@@ -28,6 +29,7 @@ countries = {
     'Tajiquistão':'tajikistan', 
     'Turquia':'turkey-turkiye',
     'Venezuela':'venezuela', 
-    'Índia':'india' }
+    'Índia':'india',
+    'União Soviética': 'russia'}
 
 inverse_countries = {v: k for k, v in countries.items()}
