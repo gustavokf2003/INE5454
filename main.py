@@ -16,10 +16,10 @@ def main():
     paises = scraping_cia()
 
     # Processa os dados de países
-    desastres_df, paises_df, desastre_pais = normalization(desastres_corrigidos)
+    #desastres_df, paises_df, desastre_pais = normalization(desastres_corrigidos)
 
     # Processa os dados dos países
-    paises_df = processing_countries(paises, paises_df)
+    desastres_df = processing_countries(paises, desastres_corrigidos)
 
     # Salva os DataFrames em arquivos CSV
     desastres_df.to_csv("data/desastres.csv", index=False, encoding='utf-8')
