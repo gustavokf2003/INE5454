@@ -1,6 +1,7 @@
 import pandas as pd
 from googletrans import Translator
 from countries import inverse_countries
+from sigla import get_country_codes
 
 def processing_countries(df, df_paises):
     translator = Translator()
@@ -54,5 +55,9 @@ def processing_countries(df, df_paises):
     })
 
     df_paises = df_paises.merge(df, on='País', how='left')
+    siglas = get_country_codes()
+    df_paises = df_paises.merge(siglas, on='País', how='left')
+    print("DataFrame de países após processamento:")
+    print(df_paises)
 
     return df_paises
